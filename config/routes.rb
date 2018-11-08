@@ -5,24 +5,24 @@ Rails.application.routes.draw do
   resources :residences
   
   
-  root 'administrators#default'
+  
   
 
   get 'administrators/default'
 
-  get 'residence/show'
+  get 'residences/show'
 
-  get 'residence/new'
+  get 'residences/new'
 
-  get 'residence/edit'
+  get 'residences/edit'
 
-  get 'administrator/index'
+  get 'administrators/index'
 
-  get 'administrator/show'
+  get 'administrators/show'
 
-  get 'administrator/new'
+  get 'administrators/new'
 
-  get 'residence/index'
+  get 'residences/index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
