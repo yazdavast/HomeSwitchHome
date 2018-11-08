@@ -4,7 +4,7 @@ class CreateResidences < ActiveRecord::Migration[5.1]
       t.string :nombre
       t.string :descripcion
       t.string :urlImag
-      t.Float :precio
+      t.float :precio
       t.location :localizacion
       t.string :estado
 

@@ -4,10 +4,10 @@ class CreateClients < ActiveRecord::Migration[5.1]
       t.string :nombre
       t.string :apellido
       t.integer :dni
-      t.Date :fechaNac
+      t.date :fechaNac
       t.string :mail
-      t.string :contraseÇña
-      t.Date :fechaReg
+      t.string :password
+      t.date :fechaReg
       t.integer :creditos
 
       t.timestamps
