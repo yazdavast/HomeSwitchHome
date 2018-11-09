@@ -5,10 +5,7 @@ Rails.application.routes.draw do
   resources :residences
   
   
-  
-  
-
-  get 'administrators/default'
+  root 'administrators#default'
 
   get 'residences/show'
 
