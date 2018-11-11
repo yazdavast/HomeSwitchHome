@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :residences
   
   
-  root 'administrators#default'
+  root 'administrators#home'
+
+  get  '/iniciarSesion',to:'administrators#iniciarSesion'
 
  
 
