@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>HomeSwitchHome</title>
+    <title>Home Switch Home</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -23,6 +23,34 @@
   <% end %>
   
 	<%= yield %>
+
+
+   <footer>
+    <br>
+    <br>
+    <nav class="navbar navbar-dark bg-dark">
+  <!-- Navbar content -->
+
+   <center>
+    <%= link_to "Contacto", "/Contacto"%> - 
+    <%= link_to "Ayuda", "/help"%> - 
+    <%= link_to "Sobre Nosotros", "/about"%></center>
+    <br>
+    <CENTER> <p> - Cadena de Hoteles Home Switch Home - 2018 -</p></CENTER>
+
+    
+
+  </nav>
+
+
+
+
+
+    </footer>
+
+
+
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
