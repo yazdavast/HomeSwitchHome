@@ -10,7 +10,10 @@
   <!-- Navbar content -->
    <h1 class="text-white bg-dark" align="left"> Iniciar Sesión</h1>
    <div align="right">
-     <%= image_tag "HSH-Logo.svg", title: "Logo", class: "image" %> 
+              <%= link_to "/", class: 'navbar-brand' do %>
+              <%= image_tag "HSH-Logo.svg",size:"300x200",title: "Logo", class: "image" %> 
+              <% end %>
+
    </div>
     </nav>
        <br>
@@ -77,7 +80,7 @@
   <!-- Navbar content -->
 
    <center>
-    <%= link_to "Contacto", "/Contacto"%> - 
+    <%= link_to "Contacto", "/contacto"%> - 
     <%= link_to "Ayuda", "/help"%> - 
     <%= link_to "Sobre Nosotros", "/about"%></center>
     <br>
