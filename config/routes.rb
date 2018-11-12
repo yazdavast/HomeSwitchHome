@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   
   root 'administrators#home'
 
-  get  '/iniciarSesion',to:'administrators#iniciarSesion'
+  get  'iniciarSesion',to:'administrators#iniciarSesion'
+
+  get 'validarLogIn',to:'administrators#validarLogIn'
+
+  get 'default', to: 'administrators#default'
 
   get 'residences/show'
 
