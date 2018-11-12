@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :residences
   
 
+
   root 'administrators#home'
 
   get 'clients/index'
@@ -24,6 +25,8 @@ Rails.application.routes.draw do
   get  'iniciarSesion',to:'administrators#iniciarSesion'
 
   get 'validarLogIn',to:'administrators#validarLogIn'
+
+
 
   get 'default', to: 'administrators#default'
 
