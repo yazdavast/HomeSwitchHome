@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :administrators
   resources :residences
-  
+  resources :reservations
 
   root 'administrators#home'
 
@@ -25,6 +25,12 @@ Rails.application.routes.draw do
 
   get 'validarLogIn',to:'administrators#validarLogIn'
 
+<<<<<<< HEAD
+=======
+  get 'reserve', to: 'residences#reserve'
+
+  get 'default', to: 'administrators#default'
+>>>>>>> beta
 
    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

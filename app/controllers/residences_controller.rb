@@ -11,10 +11,7 @@ class ResidencesController < ApplicationController
 
   def new
   	@residence= Residence.new
-
-  	
   end
-
 
   def edit
   end
@@ -27,6 +24,13 @@ class ResidencesController < ApplicationController
   		else
   			render :new
   		end
+  end
+
+  def reserve
+    @residence=Residence.find(params[:id])
+    
+  end
+  def edit
 
   end
 

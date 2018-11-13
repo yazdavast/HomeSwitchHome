@@ -34,39 +34,22 @@
        <br>
 
 
-
-       <div class="card mb-3">
-  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+<% Residence.all.each do |residence| %>
+<div class="card" style="width: 15rem;">
+  <img class="card-img-left" style="width: 15rem; height: 120px;"src=<%= residence.urlImag %> alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Hotel Four Seasons</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted"> week: -- to ---</small></p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title"> Hotel Caesars Palace</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <h5 class="card-title"> <%= residence.nombre %></h5>
+    <p class="card-text"><%= residence.descripcion %></p>
+    <%= link_to "Reservar", {:controller => "residences", :action => "reserve", :id   => residence.id }%>
+    <%#=<a class="btn btn-primary" href="/reserve" role="button">Reservar</a>%>
     <p class="card-text"><small class="text-muted">week: --- to ---</small></p>
   </div>
-  <img class="card-img-bottom" src=".../100px180/" alt="Card image cap">
-</div>
+</div>  
+<% end %>
 
 
 <h6 class="text-secondary"> -Para ver más propiedades y poder reservar, inicie sesion...</h6>
        <br>
-
-
-
-      
-
-
-
-
-
-
-
-
 
 
 <div class="p-3 mb-2 bg-dark text-white">
@@ -81,8 +64,6 @@
     
     
     </div>
-
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
