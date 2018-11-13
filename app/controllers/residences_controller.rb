@@ -18,4 +18,17 @@ class ResidencesController < ApplicationController
 
   def edit
   end
+
+
+  def create
+  	@residence=Residence.new(params.require(:residence))
+  	if @monstruo.save 
+  		redirect_to "/residences"
+  		else
+  			render :new
+  		end
+
+  end
+
+
 end
