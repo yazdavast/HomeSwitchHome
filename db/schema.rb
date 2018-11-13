@@ -62,7 +62,8 @@ ActiveRecord::Schema.define(version: 20181108214130) do
 
   create_table "reservations", force: :cascade do |t|
     t.float "precio"
-    t.date "fecha"
+    t.string "email"
+    t.integer "idCasa"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "fechaInicio"

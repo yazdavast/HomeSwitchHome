@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :administrators
   resources :residences
-  
+  resources :reservations
 
 
   root 'administrators#home'

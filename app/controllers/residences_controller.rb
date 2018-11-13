@@ -9,14 +9,10 @@ class ResidencesController < ApplicationController
 
   def new
   	 @residence=residence.new
-
-  	
-
-  
-
   end
   def reserve
     @residence=Residence.find(params[:id])
+    
   end
   def edit
   end
