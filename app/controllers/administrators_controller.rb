@@ -15,9 +15,16 @@ class AdministratorsController < ApplicationController
          
         
        else
-         redirect_to'/default'
+        #redirect_to controller: 'administrators', action: 'sesionIniciada', id: 
+         redirect_to'/administrators/sesionIniciada', id: admin.id
        end 
      end
+    
+  end
+
+  def sesionIniciada
+
+
     
   end
 
