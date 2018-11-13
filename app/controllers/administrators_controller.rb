@@ -15,7 +15,7 @@ class AdministratorsController < ApplicationController
          
         
        else
-         redirect_to'/default'
+          redirect_to "/residences"
        end 
      end
     
