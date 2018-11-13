@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   get 'validarLogIn',to:'administrators#validarLogIn'
 
-
+  get 'reserve', to: 'residences#reserve'
 
   get 'default', to: 'administrators#default'
 

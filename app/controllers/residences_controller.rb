@@ -15,7 +15,9 @@ class ResidencesController < ApplicationController
   
 
   end
-
+  def reserve
+    @residence=Residence.find(params[:id])
+  end
   def edit
   end
 end
