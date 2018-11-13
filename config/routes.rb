@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :residences
   
 
-
   root 'administrators#home'
 
   get 'clients/index'
@@ -28,9 +27,6 @@ Rails.application.routes.draw do
 
   get 'validarLogIn',to:'administrators#validarLogIn'
 
-
-
-  get 'default', to: 'administrators#default'
 
    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,20 +1,20 @@
 class ResidencesController < ApplicationController
 
   def index
-  	
+
   end
 
   def show
+
   end
+
 
   def new
-  	 @residence=residence.new
+  	@residence= Residence.new
 
   	
-
-  
-
   end
+
 
   def edit
   end

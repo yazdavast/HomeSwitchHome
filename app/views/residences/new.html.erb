@@ -1,50 +1,51 @@
 <h1>Nueva Propiedad </h1>
-<form>
-  <div class="form-group row">
-    <label for="text" class="col-sm-2 col-form-label">Nombre</label>
+
+<%= form_for @residence do |f| %>
+
+<div class="form-group row">
+    <%= f.label :nombre, 'Nombre', class: "col-sm-2 col-form-label" %>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputText" placeholder="Ingrese el nombre de la nueva propiedad">
+      <%= f.text_field :nombre, placeholder: "Ingrese el nombre de la nueva propiedad", class: "form-control" , required: true %> 
     </div>
-  </div>
-  <div class="form-group row">
-    <label for="text" class="col-sm-2 col-form-label">Descripción</label>
+</div>
+
+<div class="form-group row">
+	<%= f.label :descripcion, 'Descripción', class: "col-sm-2 col-form-label" %>
+	<div class="col-sm-10">
+		<%= f.text_field :descripcion, placeholder:"Ingrese una Descripción", class: "form-control", required: true %> 
+	</div>
+</div>
+
+<div class="form-group row">
+    <%= f.label :pais, 'Pais', class: "col-sm-2 col-form-label" %>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputText" placeholder="Ingrese una Descripción">
+      <%= f.text_field :pais, placeholder: "Ingrese el pais al cual pertenece la residencia", class: "form-control" , required: true %> 
     </div>
-  </div>
+</div>
+
+<div class="form-group row">
+    <%= f.label :provincia, 'Provincia', class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :provincia, placeholder: "Ingrese la provincia a la cual pertenece la residencia", class: "form-control" , required: true %> 
+    </div>
+</div>
+
+<div class="form-group row">
+    <%= f.label :localidad, 'Localidad', class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :localidad, placeholder: "Ingrese localidad de la residencia", class: "form-control" , required: true %> 
+    </div>
+</div>
+
 
   <div class="form-group row">
+    <div class="col-sm-10">
+    	<%= f.submit 'Guardar', class: "btn btn-primary"  %>   
+    	<%= f.submit 'Volver',class: "btn btn-outline-primary" %>
+    </div>
+  </div>
+ 
+ 
+ 
 
-    <label for="text" class="col-sm-2 col-form-label">País</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputText" placeholder="Ingrese nombre del pais al cual pertenece la residencia">
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="text" class="col-sm-2 col-form-label">Provincia</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputText" placeholder="Ingrese la Provincia a la cual pertence la residencia ">
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="text" class="col-sm-2 col-form-label">Localidad</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputText" placeholder="Ingrese la localidad de la residencia">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="text" class="col-sm-2 col-form-label">URL</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputText" placeholder="Ingrese la direccion de la imagen a mostrar ">
-    </div>
-  </div>
-  
-  
-  <div class="form-group row">
-    <div class="col-sm-10">
-      <button type="save" class="btn btn-primary">Guardar</button>
-    </div>
-  </div>
-</form>
+<% end %>
