@@ -33,7 +33,7 @@
        <h5 class="text-secondary"> -Propiedades: </h5>
        <br>
 
-
+<div class="row">
 <% Residence.all.each do |residence| %>
 <div class="card" style="width: 15rem;">
   <img class="card-img-left" style="width: 15rem; height: 120px;"src=<%= residence.urlImag %> alt="Card image cap">
@@ -46,7 +46,7 @@
   </div>
 </div>  
 <% end %>
-
+</div> 
 
 <h6 class="text-secondary"> -Para ver más propiedades y poder reservar, inicie sesion...</h6>
        <br>
