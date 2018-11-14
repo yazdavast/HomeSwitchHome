@@ -20,7 +20,7 @@ class AdministratorsController < ApplicationController
   end
 
   def sesionIniciada
-    @admin=Administrator.find(params[:id])
+    #@admin=Administrator.find(params[:id])
 
 
     

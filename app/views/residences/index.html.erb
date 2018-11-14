@@ -2,6 +2,7 @@
   <!-- Navbar content -->
    <h1 class="text-white bg-dark"> Sesion Iniciada</h1>
 
+
    <!--<%= link_to 'Usuario: #{@admin.nombre} #{@admin.apellido}', '/administrators/perfil' %>  -->
 
    <!--<div align="right"> <a href="" class="btn btn-secondary">Administrador </a>
@@ -43,47 +44,27 @@
   </nav>
   <br>
 
+  <div align="right">
+  <a href="/residences/new" class="btn btn-outline-dark">Agregar nueva Propiedad</a> </div>
 
-<% Residence.all.each do |residence| %>
-<div class="row">
-  <div class="col-sm-3">
-    <img class="card-img" src=<%= residence.urlImag %> />
-  </div>
-  <div class="col-sm-9">
+  <div class="card-group">
+    <% Residence.all.each do |residence|%>
     <div class="shadow p-3 mb-5 bg-white rounded">
-    <div class="card">
+      <div class="card">
+
+        <%= image_tag residence.urlImag ,size: "500x500", class: "card-img-top" %>
     <div class="card-body">
-    <h5 class="card-title"> <%= residence.nombre %></h5>
-    <p class="card-text"><%= residence.descripcion %></p>
-    <div class="text-right">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modifyEstado">Editar estado</button>
-    </div>
-    <%#= link_to "Reservar", {:controller => "residences", :action => "reserve", :id   => residence.id }%>
-  </div>
-</div>
-</div> 
-  </div>
- 
-</div>
-<div class="modal fade" id="modifyEstado" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Editar estado de propiedad</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Guardar</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-      </div>
+
+      <h5><a href=<%=residence_path(residence)%> class="card-title"><%=residence.nombre%></a></h5>
+      <p class="card-text"><%=residence.descripcion%></p>
+      <p class="card-text"><small class="text-muted"><%=residence.provincia%>, <%=residence.localidad%></small></p>
+
+       <%= link_to 'Modificar', edit_residence_path(residence), class: 'btn btn-primary'%>
+
+       <%= link_to 'Eliminar', residence, method: :delete, class: 'btn btn-outline-danger', data:{ confirm: '¿Estás seguro que querés eliminar esta residencia?'}%>
     </div>
   </div>
+
 </div>
-<% end %>
-
-
+  <%end%>
+</div>
