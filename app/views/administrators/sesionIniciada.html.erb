@@ -1,0 +1,63 @@
+<nav class="navbar navbar-dark bg-dark">
+  <!-- Navbar content -->
+   <h1 class="text-white bg-dark"> Sesion Iniciada</h1>
+
+   <%= link_to 'Usuario: #{@admin.nombre} #{@admin.apellido}', '/administrators/perfil' %> 
+
+   <div align="right"> <a href="" class="btn btn-secondary">Usuario: </a>
+    </div>
+ 
+</nav>
+
+<nav class="navbar navbar-dark bg-dark">
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href=" ">Inicio</a>
+  </li>
+  <li class="nav-item">
+    <a class="text-white-50 bg-dark" href=" ">Propiedades</a>
+  </li>
+  <li class="nav-item">
+    <a class="text-white-50 bg-dark" href="">Buscar</a>
+  </li>
+  <li class="nav-item">
+    <a class="text-white-50 bg-dark" href="">Reservas</a>
+  </li>
+  <li class="nav-item">
+    <a class="text-white-50 bg-dark" href="">Clientes</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="text-white-50 bg-dark" href="/help">Ayuda</a>
+  </li>
+  <li class="nav-item">
+     <a class="text-white-50 bg-dark"href="/contacto">Contacto</a>
+    
+  </li>
+</ul>
+</nav>
+
+<br>
+<br>
+
+ <div class="shadow p-3 mb-5 bg-white rounded">
+  <div class="card mb-3">
+  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">HOT SALE </h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-muted"> week: -- to ---</small></p>
+  </div>
+</div>
+</div>
+<div class="shadow p-3 mb-5 bg-white rounded">
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"> PROPIEDAD </h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-muted">week: --- to ---</small></p>
+  </div>
+  <img class="card-img-bottom" src=".../100px180/" alt="Card image cap">
+</div>
+</div>

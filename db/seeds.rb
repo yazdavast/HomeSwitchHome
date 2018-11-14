@@ -1,5 +1,5 @@
 
-Administrator.find_or_create_by(nombre: "Yazmin", apellido: "Davila", nomUsuario: "yazdavast", password: "1234")
+Administrator.find_or_create_by(nombre: "Cuenta", apellido: "Maestra", nomUsuario: "admin", password: "admin")
 
 
 
