@@ -6,23 +6,28 @@ class AdministratorsController < ApplicationController
   end
 
   def validarLogIn
+
     if (params[:nombreDeUsuario].present? && params[:clave].present?) 
       admin=Administrator.where(nomUsuario: params[:nombreDeUsuario],password: params[:clave] )
       if admin.blank? then
-         flash[:notice]="Email o Contraseña inválida ..."
-        redirect_to '/iniciarSesion'#, notice: 'Email o Contraseña inválida ...'
-       #FLASH NOTICE NO FUNCIONA!
-         
-        
-       else
-          redirect_to "/residences"
+         flash[:notice]="   Email o Contraseña inválida "
+        redirect_to '/iniciarSesion'
+       else 
+        redirect_to controller: 'administrators', action: 'sesionIniciada', id: 1 #deber ser el id del admin
        end 
      end
     
   end
 
+  def sesionIniciada
+    @admin=Administrator.find(params[:id])
+
+
+    
+  end
+
    def iniciarSesion
-   	render :layout =>false
+   	
   
   end
  

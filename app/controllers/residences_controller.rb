@@ -33,6 +33,10 @@ class ResidencesController < ApplicationController
       end
 
   end
+  def destroy
+    
+    
+  end
 
   def destroy
     @residence=Residence.find(params[:id])

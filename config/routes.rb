@@ -18,7 +18,9 @@ Rails.application.routes.draw do
 
   get 'clients/destroy'
 
-  get 'clients/sesionIniciada', to: 'clients#sesionIniciada'
+  get 'administrators/sesionIniciada/:id', to: 'administrators#sesionIniciada'
+
+  get 'clients/sesionIniciada/:id', to: 'clients#sesionIniciada'
   
 
   get  'iniciarSesion',to:'administrators#iniciarSesion'
