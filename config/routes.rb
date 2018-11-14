@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
   get 'clients/sesionIniciada/:id', to: 'clients#sesionIniciada'
   
+  get 'check',to: 'reservations#check'
 
   get  'iniciarSesion',to:'administrators#iniciarSesion'
 
