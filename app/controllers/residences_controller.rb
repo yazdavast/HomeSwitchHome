@@ -29,6 +29,10 @@ class ResidencesController < ApplicationController
   		end
 
   end
+  def destroy
+    
+    
+  end
 
 
 end
