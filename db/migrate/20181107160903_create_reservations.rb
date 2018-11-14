@@ -3,7 +3,7 @@ class CreateReservations < ActiveRecord::Migration[5.1]
     create_table :reservations do |t|
       t.float :precio
       t.string :email
-      t.integer :idCasa
+      t.integer :residence_id
       t.timestamps
     end
   end
