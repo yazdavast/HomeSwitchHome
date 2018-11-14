@@ -1,4 +1,4 @@
-Residence.destroy_all
+#Residence.destroy_all
 Administrator.destroy_all
 
 

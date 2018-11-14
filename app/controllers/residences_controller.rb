@@ -50,10 +50,10 @@ class ResidencesController < ApplicationController
 
   def update
     @residence=Residence.find(params[:id])
-    if @residence.update(params.required(:residence))
-      redirect_to "/residences", notice:"Se actualizó la residencia #{name} correctamente"
+    if @residence.update(params.require(:residence).permit(:nombre, :descripcion, :urlImag,:precio, :pais, :provincia, :localidad, :direccion))
+      redirect_to residence_path(@residence), notice:"Se actualizó la residencia #{@residence.nombre} correctamente"
     else
-    redirect_to "/residences",  notice:"Error al actualizar la residencia #{name}"
+    redirect_to "/residences",  notice:"Error al actualizar la residencia #{@residence.nombre}"
     end
   end 
 end
