@@ -1,5 +1,23 @@
 Rails.application.routes.draw do
 
+  get 'bids/index'
+
+  get 'bids/show'
+
+  get 'bids/new'
+
+  get 'bids/create'
+
+  get 'auctions/show'
+
+  get 'auctions/index'
+
+  get 'auctions/new'
+
+  get 'auctions/create'
+
+  get 'auctions/destroy'
+
   resources :administrators
   resources :residences
 
@@ -26,6 +44,9 @@ Rails.application.routes.draw do
   get  'iniciarSesion',to:'administrators#iniciarSesion'
 
   get 'validarLogIn',to:'administrators#validarLogIn'
+
+  get 'verCalendario', to:'residences#verCalendario'
+  get 'clients/residences', to: 'clients#residences'
   
 
 

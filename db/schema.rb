@@ -25,15 +25,17 @@ ActiveRecord::Schema.define(version: 20181113152640) do
   end
 
   create_table "auctions", force: :cascade do |t|
-    t.float "precioBase"
+    t.float "precioBase"  
     t.float "precioActual"
+    t.belongs_to :residence, index: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "bids", force: :cascade do |t|
     t.float "valor"
-    t.time "fecha"
+    #t.time "fecha"
+    t.belongs_to :auction, index: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -81,6 +83,7 @@ ActiveRecord::Schema.define(version: 20181113152640) do
     t.string "provincia"
     t.string "localidad"
     t.string "direccion"
+
   end
 
   create_table "weeks", force: :cascade do |t|
