@@ -16,7 +16,8 @@
 
                   <%= text_field_tag :nombreDeUsuario, params[:nombreDeUsuario],class: "form-control",placeholder: "ejemplo@hsh.com", required: true%>
 
-                  <small align="left"> <%= label_tag :emailHelp, 'Como usuario administrador ingrese su nombre de usuario.', class: 'form-text text-muted' %> </small>
+                  <div align="left"><small align="left"> <%= label_tag :emailHelp, 'Como usuario administrador ingrese su nombre de usuario.', class: 'form-text text-muted' %> </small>
+                  </div>
                   <br>
 
                   <div align="left"> <%= label_tag :clave,'Ingrese su contraseña' %></div>
@@ -25,6 +26,8 @@
                   <br>
                   <center><%= submit_tag 'Ingresar', class: 'btn btn-primary btn-lg'%> </center>
                   </div>
+
+                  
 
           <%end %>          
 
